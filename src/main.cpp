@@ -11,10 +11,10 @@ int main() {
     std::cout<<"$ ";
     std::string command;
     std::getline(std::cin,command);
-    std::cout<<command<<": command not found\n";
     if(command=="exit"){
       break;
     }
+    std::cout<<command<<": command not found\n";
   }
 
   return 0;
