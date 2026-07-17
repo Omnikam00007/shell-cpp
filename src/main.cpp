@@ -14,19 +14,20 @@ int main() {
     if(command=="exit"){
       break;
     }
-    if(command.substr(0,5)=="echo "){
+    else if(command.substr(0,5)=="echo "){
       std::cout<<command.substr(5,command.size()-1)<<std::endl;
     }
-    else{
-      std::cout<<command<<": command not found\n";
-    }
 
-    if(command.substr(0,5)=="type "){
+    else if(command.substr(0,5)=="type "){
         if(command.substr(5,command.size()-1)=="exit" || command.substr(5,command.size()-1)=="type" || command.substr(5,command.size()-1)=="echo"){
           std::cout<<command.substr(5,command.size()-1)<<" is a shell builtin"<<std::endl;
         }else{
           std::cout<<command.substr(5,command.size()-1)<<": command not found\n";
+          break;
         }
+    }
+    else{
+      std::cout<<command<<": command not found\n";
     }
   }
 
