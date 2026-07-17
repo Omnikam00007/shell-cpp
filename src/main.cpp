@@ -8,14 +8,14 @@ int main() {
 
   // TODO: Uncomment the code below to pass the first stage
   while(true){
-    std::cout<<"\n$ ";
+    std::cout<<"$ ";
     std::string command;
     std::getline(std::cin,command);
     if(command=="exit"){
       break;
     }
     if(command.substr(0,5)=="echo "){
-      std::cout<<command.substr(5,command.size()-1);
+      std::cout<<command.substr(5,command.size()-1)<<std::endl;
     }
     // std::cout<<command<<": command not found\n";
   }
