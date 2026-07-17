@@ -20,6 +20,14 @@ int main() {
     else{
       std::cout<<command<<": command not found\n";
     }
+
+    if(command.substr(0,5)=="type "){
+        if(command.substr(5,command.size()-1)=="exit" || command.substr(5,command.size()-1)=="type" || command.substr(5,command.size()-1)=="echo"){
+          cout<<command.substr(5,command.size()-1)<<" is a shell builtin"<<std::endl;
+        }else{
+          std::cout<<command<<": command not found\n";
+        }
+    }
   }
 
   return 0;
