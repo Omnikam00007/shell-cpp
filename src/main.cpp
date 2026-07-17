@@ -22,7 +22,7 @@ int main() {
         if(command.substr(5,command.size()-1)=="exit" || command.substr(5,command.size()-1)=="type" || command.substr(5,command.size()-1)=="echo"){
           std::cout<<command.substr(5,command.size()-1)<<" is a shell builtin"<<std::endl;
         }else{
-          std::cout<<command.substr(5,command.size()-1)<<": command not found\n";
+          std::cout<<command.substr(5,command.size()-1)<<": not found\n";
           break;
         }
     }
