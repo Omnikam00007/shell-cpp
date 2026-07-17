@@ -23,7 +23,7 @@ int main() {
           std::cout<<command.substr(5,command.size()-1)<<" is a shell builtin"<<std::endl;
         }else{
           std::cout<<command.substr(5,command.size()-1)<<": not found\n";
-          break;
+          continue;
         }
     }
     else{
